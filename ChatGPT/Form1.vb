@@ -74,7 +74,7 @@ Public Class Form1
             If CreateBox.SelectedItem.ToString() = "" Then
                 create = ""
             Else
-                create = "Create As " + CreateBox.SelectedItem.ToString() + ". "
+                create = "Create As " + CreateBox.SelectedItem.ToString() + ". about: "
             End If
         End If
 
