@@ -51,33 +51,23 @@ Public Class Form1
         If ActBox.SelectedItem.ToString() = "Custom" Then
             act = "Act as " + ActText.Text + ". "
         Else
-            If ActBox.SelectedItem.ToString() = "" Then
-                act = ""
-            Else
-                act = "Act as " + ActBox.SelectedItem.ToString() + ". "
-            End If
+            act = "Act as " + ActBox.SelectedItem.ToString() + ". "
         End If
 
-        If ShowBox.SelectedItem.ToString() = "Custom" Then
-            show = "Show as " + ShowText.Text + ". "
-        Else
-            If ShowBox.SelectedItem.ToString() = "" Then
-                show = ""
-            Else
-                show = "Show As " + ShowBox.SelectedItem.ToString() + ". "
-            End If
-        End If
+
 
         If CreateBox.SelectedItem.ToString() = "Custom" Then
             create = "Create As " + CreateText.Text + ". "
         Else
-            If CreateBox.SelectedItem.ToString() = "" Then
-                create = ""
-            Else
-                create = "Create As " + CreateBox.SelectedItem.ToString() + ". about: "
-            End If
+            create = "Create As " + CreateBox.SelectedItem.ToString()
         End If
 
+
+        If ShowBox.SelectedItem.ToString() = "Custom" Then
+            show = "Show as " + ShowText.Text + ". "
+        Else
+            show = "Show As " + ShowBox.SelectedItem.ToString() + ". " + ". about: "
+        End If
 
 
         Dim inputText As String
