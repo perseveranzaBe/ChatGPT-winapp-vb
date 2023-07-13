@@ -1,6 +1,7 @@
 ﻿Imports System.Net.Http
 Imports System.Runtime
 Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
@@ -31,9 +32,8 @@ Public Class Form1
             Dim content As String = Await response.Content.ReadAsStringAsync()
             Debug.WriteLine("Response status: " + response.StatusCode.ToString())
             Debug.WriteLine("Response content: " + content)
-
             If response.IsSuccessStatusCode Then
-                Dim jObject As JObject = jObject.Parse(content)
+                Dim jObject As JObject = JObject.Parse(content)
                 output = jObject("choices")(0)("message")("content").ToString()
             End If
         End Using
@@ -43,12 +43,51 @@ Public Class Form1
 
 
     Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim inputText As String = TextBox1.Text
-        RichTextBox1.AppendText("You: " + Environment.NewLine + inputText + Environment.NewLine)
+        Dim act As String
+        Dim create As String
+        Dim show As String
+
+
+        If ActBox.SelectedItem.ToString() = "Custom" Then
+            act = "Act as " + ActText.Text + ". "
+        Else
+            If ActBox.SelectedItem.ToString() = "" Then
+                act = ""
+            Else
+                act = "Act as " + ActBox.SelectedItem.ToString() + ". "
+            End If
+        End If
+
+        If ShowBox.SelectedItem.ToString() = "Custom" Then
+            show = "Show as " + ShowText.Text + ". "
+        Else
+            If ShowBox.SelectedItem.ToString() = "" Then
+                show = ""
+            Else
+                show = "Show As " + ShowBox.SelectedItem.ToString() + ". "
+            End If
+        End If
+
+        If CreateBox.SelectedItem.ToString() = "Custom" Then
+            create = "Create As " + CreateText.Text + ". "
+        Else
+            If CreateBox.SelectedItem.ToString() = "" Then
+                create = ""
+            Else
+                create = "Create As " + CreateBox.SelectedItem.ToString() + ". "
+            End If
+        End If
+
+
+
+        Dim inputText As String
+        inputText = act + create + show + TextBox1.Text
+
+        RichTextBox1.AppendText("You: " + Environment.NewLine + inputText + Environment.NewLine + Environment.NewLine)
         TextBox1.Clear()
 
         Dim output As String = Await SendMessageToGPT3Async(inputText)
-        RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
+        RichTextBox1.AppendText("ChatGPT: " + output + Environment.NewLine + Environment.NewLine)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -99,9 +138,54 @@ Public Class Form1
         Button5.Text = btn5
         Button6.Text = btn6
 
+        ActBox.SelectedIndex = 0
+        ShowBox.SelectedIndex = 0
+        CreateBox.SelectedIndex = 0
+
+
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ActBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ActBox.SelectedIndexChanged
+        ' Check if "Custom" option is selected
+        If ActBox.SelectedItem.ToString() = "Custom" Then
+            ' Make ActText field visible
+            ActText.Visible = True
+        Else
+            ' Make ActText field invisible and clear its contents
+            ActText.Visible = False
+            ActText.Clear()
+        End If
+    End Sub
+
+    Private Sub CreateBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CreateBox.SelectedIndexChanged
+        ' Check if "Custom" option is selected
+        If CreateBox.SelectedItem.ToString() = "Custom" Then
+            ' Make ActText field visible
+            CreateText.Visible = True
+        Else
+            ' Make ActText field invisible and clear its contents
+            CreateText.Visible = False
+            CreateText.Clear()
+        End If
+    End Sub
+
+    Private Sub ShowBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ShowBox.SelectedIndexChanged
+        ' Check if "Custom" option is selected
+        If ShowBox.SelectedItem.ToString() = "Custom" Then
+            ' Make ActText field visible
+            ShowText.Visible = True
+        Else
+            ' Make ActText field invisible and clear its contents
+            ShowText.Visible = False
+            ShowText.Clear()
+        End If
     End Sub
 End Class
