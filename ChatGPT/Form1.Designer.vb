@@ -26,7 +26,6 @@ Partial Class Form1
         Button1 = New Button()
         Button2 = New Button()
         Button3 = New Button()
-        Button4 = New Button()
         RichTextBox1 = New RichTextBox()
         TextBox1 = New RichTextBox()
         Button5 = New Button()
@@ -70,21 +69,12 @@ Partial Class Form1
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(64, 732)
+        Button3.Location = New Point(64, 799)
         Button3.Name = "Button3"
         Button3.Size = New Size(155, 42)
         Button3.TabIndex = 2
         Button3.Text = "Run as CAN"
         Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Button4
-        ' 
-        Button4.Location = New Point(64, 949)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(155, 42)
-        Button4.TabIndex = 3
-        Button4.Text = "Set API Key"
-        Button4.UseVisualStyleBackColor = True
         ' 
         ' RichTextBox1
         ' 
@@ -104,7 +94,7 @@ Partial Class Form1
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(64, 808)
+        Button5.Location = New Point(64, 875)
         Button5.Name = "Button5"
         Button5.Size = New Size(155, 42)
         Button5.TabIndex = 7
@@ -113,7 +103,7 @@ Partial Class Form1
         ' 
         ' Button6
         ' 
-        Button6.Location = New Point(64, 882)
+        Button6.Location = New Point(64, 949)
         Button6.Name = "Button6"
         Button6.Size = New Size(155, 42)
         Button6.TabIndex = 8
@@ -279,7 +269,6 @@ Partial Class Form1
         Controls.Add(Button5)
         Controls.Add(TextBox1)
         Controls.Add(RichTextBox1)
-        Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
@@ -297,7 +286,6 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents TextBox1 As RichTextBox
     Friend WithEvents Button5 As Button
