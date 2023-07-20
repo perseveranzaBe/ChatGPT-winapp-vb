@@ -98,7 +98,7 @@ Public Class Form1
         Button3.Visible = True
         Button5.Visible = True
         Button6.Visible = True
-        Button7.Visible = True
+
     End Sub
 
 
@@ -108,11 +108,6 @@ Public Class Form1
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
         ToggleExtraControls(False)
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim SetAPI As New SetAPI()
-        SetAPI.ShowDialog()
     End Sub
 
     Private Async Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -131,10 +126,6 @@ Public Class Form1
         ToggleExtraControls(False)
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Dim buttons As New buttons()
-        buttons.ShowDialog()
-    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim btn3 As String = ""
         Dim btn5 As String = ""
@@ -201,7 +192,7 @@ Public Class Form1
         Button3.Visible = isVisible
         Button5.Visible = isVisible
         Button6.Visible = isVisible
-        Button7.Visible = isVisible
+
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -212,5 +203,10 @@ Public Class Form1
     Private Sub SetButtonBehaviorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetButtonBehaviorToolStripMenuItem.Click
         Dim buttons As New buttons()
         buttons.ShowDialog()
+    End Sub
+
+    Private Sub SetAPIKeyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetAPIKeyToolStripMenuItem.Click
+        Dim SetAPI As New SetAPI()
+        SetAPI.ShowDialog()
     End Sub
 End Class

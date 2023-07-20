@@ -31,7 +31,6 @@ Partial Class Form1
         TextBox1 = New RichTextBox()
         Button5 = New Button()
         Button6 = New Button()
-        Button7 = New Button()
         Label1 = New Label()
         Label2 = New Label()
         ActBox = New ComboBox()
@@ -47,6 +46,7 @@ Partial Class Form1
         AboutToolStripMenuItem = New ToolStripMenuItem()
         SettingsToolStripMenuItem = New ToolStripMenuItem()
         SetButtonBehaviorToolStripMenuItem = New ToolStripMenuItem()
+        SetAPIKeyToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -70,7 +70,7 @@ Partial Class Form1
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(64, 667)
+        Button3.Location = New Point(64, 732)
         Button3.Name = "Button3"
         Button3.Size = New Size(155, 42)
         Button3.TabIndex = 2
@@ -104,7 +104,7 @@ Partial Class Form1
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(64, 743)
+        Button5.Location = New Point(64, 808)
         Button5.Name = "Button5"
         Button5.Size = New Size(155, 42)
         Button5.TabIndex = 7
@@ -113,21 +113,12 @@ Partial Class Form1
         ' 
         ' Button6
         ' 
-        Button6.Location = New Point(64, 817)
+        Button6.Location = New Point(64, 882)
         Button6.Name = "Button6"
         Button6.Size = New Size(155, 42)
         Button6.TabIndex = 8
         Button6.Text = "Run as Mongo Tom"
         Button6.UseVisualStyleBackColor = True
-        ' 
-        ' Button7
-        ' 
-        Button7.Location = New Point(64, 885)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(155, 42)
-        Button7.TabIndex = 9
-        Button7.Text = "Set button behavior"
-        Button7.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -235,7 +226,7 @@ Partial Class Form1
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {AboutToolStripMenuItem, SettingsToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {SettingsToolStripMenuItem, AboutToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1211, 24)
@@ -250,7 +241,7 @@ Partial Class Form1
         ' 
         ' SettingsToolStripMenuItem
         ' 
-        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem})
+        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, SetAPIKeyToolStripMenuItem})
         SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         SettingsToolStripMenuItem.Size = New Size(61, 20)
         SettingsToolStripMenuItem.Text = "Settings"
@@ -260,6 +251,12 @@ Partial Class Form1
         SetButtonBehaviorToolStripMenuItem.Name = "SetButtonBehaviorToolStripMenuItem"
         SetButtonBehaviorToolStripMenuItem.Size = New Size(180, 22)
         SetButtonBehaviorToolStripMenuItem.Text = "Set button behavior"
+        ' 
+        ' SetAPIKeyToolStripMenuItem
+        ' 
+        SetAPIKeyToolStripMenuItem.Name = "SetAPIKeyToolStripMenuItem"
+        SetAPIKeyToolStripMenuItem.Size = New Size(180, 22)
+        SetAPIKeyToolStripMenuItem.Text = "Set API Key"
         ' 
         ' Form1
         ' 
@@ -278,7 +275,6 @@ Partial Class Form1
         Controls.Add(ActBox)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(Button7)
         Controls.Add(Button6)
         Controls.Add(Button5)
         Controls.Add(TextBox1)
@@ -306,7 +302,6 @@ Partial Class Form1
     Friend WithEvents TextBox1 As RichTextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ActBox As ComboBox
@@ -322,4 +317,5 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetButtonBehaviorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetAPIKeyToolStripMenuItem As ToolStripMenuItem
 End Class
