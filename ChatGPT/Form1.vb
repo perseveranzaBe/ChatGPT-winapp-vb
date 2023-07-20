@@ -7,24 +7,23 @@ Imports Newtonsoft.Json.Linq
 
 Public Class Form1
 
-
-
+    Private _messages As New List(Of Object)
 
     Private Async Function SendMessageToGPT3Async(inputText As String) As Task(Of String)
         Dim output As String = ""
-        Dim apikey As String = ""
-        apikey = My.Settings("ApiKey")
+        Dim apikey As String = My.Settings("ApiKey")
 
         Using client As New HttpClient()
             client.DefaultRequestHeaders.Add("Authorization", "Bearer " & apikey)
 
+            _messages.Add(New With {.role = "user", .content = inputText})
+
             Dim json As String = JsonConvert.SerializeObject(New With {
-            .model = "gpt-3.5-turbo",
-            .messages = New List(Of Object) From {
-                New With {.role = "user", .content = inputText}
-            },
-            .temperature = 0.7
-        })
+                .model = "gpt-3.5-turbo",
+                .messages = _messages,
+                .temperature = 0.7
+            })
+            RichTextBox1.AppendText("Sending: " + json + Environment.NewLine + Environment.NewLine)
 
             Dim data As New StringContent(json, Encoding.UTF8, "application/json")
 
@@ -35,6 +34,8 @@ Public Class Form1
             If response.IsSuccessStatusCode Then
                 Dim jObject As JObject = JObject.Parse(content)
                 output = jObject("choices")(0)("message")("content").ToString()
+
+                _messages.Add(New With {.role = "assistant", .content = output})
             End If
         End Using
 
@@ -47,31 +48,32 @@ Public Class Form1
         Dim create As String
         Dim show As String
 
-
-        If ActBox.SelectedItem.ToString() = "Custom" Then
-            act = "Act as " + ActText.Text + ". "
-        Else
-            act = "Act as " + ActBox.SelectedItem.ToString() + ". "
-        End If
-
-
-
-        If CreateBox.SelectedItem.ToString() = "Custom" Then
-            create = "Create As " + CreateText.Text + ". "
-        Else
-            create = "Create As " + CreateBox.SelectedItem.ToString()
-        End If
-
-
-        If ShowBox.SelectedItem.ToString() = "Custom" Then
-            show = "Show as " + ShowText.Text + ". "
-        Else
-            show = "Show As " + ShowBox.SelectedItem.ToString() + ". " + ". about: "
-        End If
-
-
         Dim inputText As String
-        inputText = act + create + show + TextBox1.Text
+        ' If it's the first message
+        If _messages.Count = 0 Then
+            If ActBox.SelectedItem.ToString() = "Custom" Then
+                act = "Act as " + ActText.Text + ". "
+            Else
+                act = "Act as " + ActBox.SelectedItem.ToString() + ". "
+            End If
+
+            If CreateBox.SelectedItem.ToString() = "Custom" Then
+                create = "Create As " + CreateText.Text + ". "
+            Else
+                create = "Create As " + CreateBox.SelectedItem.ToString()
+            End If
+
+            If ShowBox.SelectedItem.ToString() = "Custom" Then
+                show = "Show as " + ShowText.Text + ". "
+            Else
+                show = "Show As " + ShowBox.SelectedItem.ToString() + ". " + ". about: "
+            End If
+
+            inputText = act + create + show + TextBox1.Text
+        Else
+            ' If it's not the first message
+            inputText = TextBox1.Text
+        End If
 
         RichTextBox1.AppendText("You: " + Environment.NewLine + inputText + Environment.NewLine + Environment.NewLine)
         TextBox1.Clear()
@@ -83,6 +85,7 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         RichTextBox1.Clear()
         TextBox1.Clear()
+        _messages.Clear()
     End Sub
 
 
@@ -117,7 +120,7 @@ Public Class Form1
         Dim buttons As New buttons()
         buttons.ShowDialog()
     End Sub
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim btn3 As String = ""
         Dim btn5 As String = ""
         Dim btn6 As String = ""

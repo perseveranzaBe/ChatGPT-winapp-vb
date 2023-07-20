@@ -22,243 +22,238 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ActBox = New System.Windows.Forms.ComboBox()
-        Me.CreateBox = New System.Windows.Forms.ComboBox()
-        Me.ShowBox = New System.Windows.Forms.ComboBox()
-        Me.ActText = New System.Windows.Forms.TextBox()
-        Me.CreateText = New System.Windows.Forms.TextBox()
-        Me.ShowText = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1027, 49)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(155, 42)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Send"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1027, 97)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(155, 42)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(64, 636)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(155, 42)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Run as CAN"
-        Me.Button3.UseVisualStyleBackColor = True
-        Me.Button3.Visible = False
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(64, 918)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(155, 42)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Set API Key"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(286, 185)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(896, 775)
-        Me.RichTextBox1.TabIndex = 5
-        Me.RichTextBox1.Text = ""
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(286, 49)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(723, 90)
-        Me.TextBox1.TabIndex = 6
-        Me.TextBox1.Text = ""
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(64, 712)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(155, 42)
-        Me.Button5.TabIndex = 7
-        Me.Button5.Text = "Run as STAN"
-        Me.Button5.UseVisualStyleBackColor = True
-        Me.Button5.Visible = False
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(64, 786)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(155, 42)
-        Me.Button6.TabIndex = 8
-        Me.Button6.Text = "Run as Mongo Tom"
-        Me.Button6.UseVisualStyleBackColor = True
-        Me.Button6.Visible = False
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(64, 854)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(155, 42)
-        Me.Button7.TabIndex = 9
-        Me.Button7.Text = "Set button behavior"
-        Me.Button7.UseVisualStyleBackColor = True
-        Me.Button7.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(289, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 15)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Enter prompt"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(289, 164)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 15)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "History"
-        '
-        'ActBox
-        '
-        Me.ActBox.AllowDrop = True
-        Me.ActBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ActBox.FormattingEnabled = True
-        Me.ActBox.Items.AddRange(New Object() {"Marketer", "Advertiser", "Mindset Coach", "Best selling author", "Therapist", "Website designer", "Journalist", "Inventor", "Chief financial officer", "Copywriter", "Prompt engineer", "Accountant", "Lawyer", "Analyst", "Ghostwriter", "Project manager", "Custom"})
-        Me.ActBox.Location = New System.Drawing.Point(49, 53)
-        Me.ActBox.Name = "ActBox"
-        Me.ActBox.Size = New System.Drawing.Size(170, 23)
-        Me.ActBox.TabIndex = 12
-        '
-        'CreateBox
-        '
-        Me.CreateBox.FormattingEnabled = True
-        Me.CreateBox.Items.AddRange(New Object() {"Headline", "Article", "Essay", "Book outline", "Email sequence", "Social media post", "Product description", "Cover letter", "Blog post", "SEO keywords", "Summary", "Video script", "Recipe", "Sales copy", "Analysis", "Ad copy", "Custom"})
-        Me.CreateBox.Location = New System.Drawing.Point(49, 132)
-        Me.CreateBox.Name = "CreateBox"
-        Me.CreateBox.Size = New System.Drawing.Size(170, 23)
-        Me.CreateBox.TabIndex = 13
-        '
-        'ShowBox
-        '
-        Me.ShowBox.FormattingEnabled = True
-        Me.ShowBox.Items.AddRange(New Object() {"A table", "A list", "Summary", "HTML", "Code", "Spreadsheet", "Graphs", "CSV file", "Plain text file", "JSON", "Rich text", "PDF", "XML", "Markdown", "Gannt chart", "Word Cloud", "Custom"})
-        Me.ShowBox.Location = New System.Drawing.Point(49, 217)
-        Me.ShowBox.Name = "ShowBox"
-        Me.ShowBox.Size = New System.Drawing.Size(170, 23)
-        Me.ShowBox.TabIndex = 14
-        '
-        'ActText
-        '
-        Me.ActText.Location = New System.Drawing.Point(49, 81)
-        Me.ActText.Name = "ActText"
-        Me.ActText.Size = New System.Drawing.Size(170, 23)
-        Me.ActText.TabIndex = 15
-        Me.ActText.Visible = False
-        '
-        'CreateText
-        '
-        Me.CreateText.Location = New System.Drawing.Point(49, 161)
-        Me.CreateText.Name = "CreateText"
-        Me.CreateText.Size = New System.Drawing.Size(170, 23)
-        Me.CreateText.TabIndex = 16
-        Me.CreateText.Visible = False
-        '
-        'ShowText
-        '
-        Me.ShowText.Location = New System.Drawing.Point(49, 246)
-        Me.ShowText.Name = "ShowText"
-        Me.ShowText.Size = New System.Drawing.Size(170, 23)
-        Me.ShowText.TabIndex = 17
-        Me.ShowText.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(49, 35)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 15)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Act as"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(49, 114)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 15)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Create a"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(49, 199)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 15)
-        Me.Label5.TabIndex = 20
-        Me.Label5.Text = "Show as"
-        '
-        'Form1
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1211, 993)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ShowText)
-        Me.Controls.Add(Me.CreateText)
-        Me.Controls.Add(Me.ActText)
-        Me.Controls.Add(Me.ShowBox)
-        Me.Controls.Add(Me.CreateBox)
-        Me.Controls.Add(Me.ActBox)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
-        Me.Text = "ChatGPT"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
+        Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
+        Button4 = New Button()
+        RichTextBox1 = New RichTextBox()
+        TextBox1 = New RichTextBox()
+        Button5 = New Button()
+        Button6 = New Button()
+        Button7 = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
+        ActBox = New ComboBox()
+        CreateBox = New ComboBox()
+        ShowBox = New ComboBox()
+        ActText = New TextBox()
+        CreateText = New TextBox()
+        ShowText = New TextBox()
+        Label3 = New Label()
+        Label4 = New Label()
+        Label5 = New Label()
+        SuspendLayout()
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(1027, 49)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(155, 42)
+        Button1.TabIndex = 0
+        Button1.Text = "Send"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(1027, 97)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(155, 42)
+        Button2.TabIndex = 1
+        Button2.Text = "Clear"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(64, 636)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(155, 42)
+        Button3.TabIndex = 2
+        Button3.Text = "Run as CAN"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' Button4
+        ' 
+        Button4.Location = New Point(64, 918)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(155, 42)
+        Button4.TabIndex = 3
+        Button4.Text = "Set API Key"
+        Button4.UseVisualStyleBackColor = True
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.Location = New Point(286, 185)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(896, 775)
+        RichTextBox1.TabIndex = 5
+        RichTextBox1.Text = ""
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(286, 49)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(723, 90)
+        TextBox1.TabIndex = 6
+        TextBox1.Text = ""
+        ' 
+        ' Button5
+        ' 
+        Button5.Location = New Point(64, 712)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(155, 42)
+        Button5.TabIndex = 7
+        Button5.Text = "Run as STAN"
+        Button5.UseVisualStyleBackColor = True
+        ' 
+        ' Button6
+        ' 
+        Button6.Location = New Point(64, 786)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(155, 42)
+        Button6.TabIndex = 8
+        Button6.Text = "Run as Mongo Tom"
+        Button6.UseVisualStyleBackColor = True
+        ' 
+        ' Button7
+        ' 
+        Button7.Location = New Point(64, 854)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(155, 42)
+        Button7.TabIndex = 9
+        Button7.Text = "Set button behavior"
+        Button7.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(289, 27)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(77, 15)
+        Label1.TabIndex = 10
+        Label1.Text = "Enter prompt"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(289, 164)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(45, 15)
+        Label2.TabIndex = 11
+        Label2.Text = "History"
+        ' 
+        ' ActBox
+        ' 
+        ActBox.AllowDrop = True
+        ActBox.DropDownStyle = ComboBoxStyle.DropDownList
+        ActBox.FormattingEnabled = True
+        ActBox.Items.AddRange(New Object() {"Marketer", "Advertiser", "Mindset Coach", "Best selling author", "Therapist", "Website designer", "Journalist", "Inventor", "Chief financial officer", "Copywriter", "Prompt engineer", "Accountant", "Lawyer", "Analyst", "Ghostwriter", "Project manager", "Custom"})
+        ActBox.Location = New Point(49, 53)
+        ActBox.Name = "ActBox"
+        ActBox.Size = New Size(170, 23)
+        ActBox.TabIndex = 12
+        ' 
+        ' CreateBox
+        ' 
+        CreateBox.FormattingEnabled = True
+        CreateBox.Items.AddRange(New Object() {"Headline", "Article", "Essay", "Book outline", "Email sequence", "Social media post", "Product description", "Cover letter", "Blog post", "SEO keywords", "Summary", "Video script", "Recipe", "Sales copy", "Analysis", "Ad copy", "Custom"})
+        CreateBox.Location = New Point(49, 132)
+        CreateBox.Name = "CreateBox"
+        CreateBox.Size = New Size(170, 23)
+        CreateBox.TabIndex = 13
+        ' 
+        ' ShowBox
+        ' 
+        ShowBox.FormattingEnabled = True
+        ShowBox.Items.AddRange(New Object() {"A table", "A list", "Summary", "HTML", "Code", "Spreadsheet", "Graphs", "CSV file", "Plain text file", "JSON", "Rich text", "PDF", "XML", "Markdown", "Gannt chart", "Word Cloud", "Custom"})
+        ShowBox.Location = New Point(49, 217)
+        ShowBox.Name = "ShowBox"
+        ShowBox.Size = New Size(170, 23)
+        ShowBox.TabIndex = 14
+        ' 
+        ' ActText
+        ' 
+        ActText.Location = New Point(49, 81)
+        ActText.Name = "ActText"
+        ActText.Size = New Size(170, 23)
+        ActText.TabIndex = 15
+        ActText.Visible = False
+        ' 
+        ' CreateText
+        ' 
+        CreateText.Location = New Point(49, 161)
+        CreateText.Name = "CreateText"
+        CreateText.Size = New Size(170, 23)
+        CreateText.TabIndex = 16
+        CreateText.Visible = False
+        ' 
+        ' ShowText
+        ' 
+        ShowText.Location = New Point(49, 246)
+        ShowText.Name = "ShowText"
+        ShowText.Size = New Size(170, 23)
+        ShowText.TabIndex = 17
+        ShowText.Visible = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Location = New Point(49, 35)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(39, 15)
+        Label3.TabIndex = 18
+        Label3.Text = "Act as"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(49, 114)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(50, 15)
+        Label4.TabIndex = 19
+        Label4.Text = "Create a"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(49, 199)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(50, 15)
+        Label5.TabIndex = 20
+        Label5.Text = "Show as"
+        ' 
+        ' Form1
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.GradientActiveCaption
+        ClientSize = New Size(1211, 993)
+        Controls.Add(Label5)
+        Controls.Add(Label4)
+        Controls.Add(Label3)
+        Controls.Add(ShowText)
+        Controls.Add(CreateText)
+        Controls.Add(ActText)
+        Controls.Add(ShowBox)
+        Controls.Add(CreateBox)
+        Controls.Add(ActBox)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(Button7)
+        Controls.Add(Button6)
+        Controls.Add(Button5)
+        Controls.Add(TextBox1)
+        Controls.Add(RichTextBox1)
+        Controls.Add(Button4)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Name = "Form1"
+        Text = "ChatGPT"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Button1 As Button
