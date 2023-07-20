@@ -59,7 +59,7 @@ Public Class Form1
             If CreateBox.SelectedItem.ToString() = "Custom" Then
                 create = "Create As " + CreateText.Text + ". "
             Else
-                create = "Create As " + CreateBox.SelectedItem.ToString()
+                create = "Create As " + CreateBox.SelectedItem.ToString() + ". "
             End If
 
             If ShowBox.SelectedItem.ToString() = "Custom" Then
