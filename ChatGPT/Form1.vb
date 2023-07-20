@@ -19,7 +19,7 @@ Public Class Form1
             _messages.Add(New With {.role = "user", .content = inputText})
 
             Dim json As String = JsonConvert.SerializeObject(New With {
-                .model = "gpt-3.5-turbo",
+                .model = My.Settings("model"),
                 .messages = _messages,
                 .temperature = 0.7
             })

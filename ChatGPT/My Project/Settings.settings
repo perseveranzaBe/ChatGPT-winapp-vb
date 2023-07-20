@@ -23,5 +23,8 @@
     <Setting Name="BTNMONGO" Type="System.String" Scope="User">
       <Value Profile="(Default)">Run as MONGO</Value>
     </Setting>
+    <Setting Name="model" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gpt-3.5-turbo</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
