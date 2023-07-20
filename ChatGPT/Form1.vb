@@ -65,7 +65,7 @@ Public Class Form1
             If ShowBox.SelectedItem.ToString() = "Custom" Then
                 show = "Show as " + ShowText.Text + ". "
             Else
-                show = "Show As " + ShowBox.SelectedItem.ToString() + ". " + ". about: "
+                show = "Show As " + ShowBox.SelectedItem.ToString() + ". " + "about: "
             End If
 
             inputText = act + create + show + TextBox1.Text
