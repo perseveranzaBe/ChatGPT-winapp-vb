@@ -147,28 +147,31 @@ Partial Class Form1
         ActBox.AllowDrop = True
         ActBox.DropDownStyle = ComboBoxStyle.DropDownList
         ActBox.FormattingEnabled = True
-        ActBox.Items.AddRange(New Object() {"Marketer", "Advertiser", "Mindset Coach", "Best selling author", "Therapist", "Website designer", "Journalist", "Inventor", "Chief financial officer", "Copywriter", "Prompt engineer", "Accountant", "Lawyer", "Analyst", "Ghostwriter", "Project manager", "Custom"})
+        ActBox.Items.AddRange(New Object() {"Accountant", "Advertiser", "Analyst", "Best selling author", "Chief financial officer", "Copywriter", "Custom", "Ghostwriter", "Inventor", "Journalist", "Lawyer", "Marketer", "Mindset Coach", "Project manager", "Prompt engineer", "Therapist", "Website designer"})
         ActBox.Location = New Point(49, 53)
         ActBox.Name = "ActBox"
         ActBox.Size = New Size(170, 23)
+        ActBox.Sorted = True
         ActBox.TabIndex = 12
         ' 
         ' CreateBox
         ' 
         CreateBox.FormattingEnabled = True
-        CreateBox.Items.AddRange(New Object() {"Headline", "Article", "Essay", "Book outline", "Email sequence", "Social media post", "Product description", "Cover letter", "Blog post", "SEO keywords", "Summary", "Video script", "Recipe", "Sales copy", "Analysis", "Ad copy", "Custom"})
+        CreateBox.Items.AddRange(New Object() {"Ad copy", "Analysis", "Article", "Blog post", "Book outline", "Cover letter", "Custom", "Email sequence", "Essay", "Headline", "Product description", "Recipe", "Sales copy", "SEO keywords", "Social media post", "Summary", "Video script"})
         CreateBox.Location = New Point(49, 132)
         CreateBox.Name = "CreateBox"
         CreateBox.Size = New Size(170, 23)
+        CreateBox.Sorted = True
         CreateBox.TabIndex = 13
         ' 
         ' ShowBox
         ' 
         ShowBox.FormattingEnabled = True
-        ShowBox.Items.AddRange(New Object() {"A table", "A list", "Summary", "HTML", "Code", "Spreadsheet", "Graphs", "CSV file", "Plain text file", "JSON", "Rich text", "PDF", "XML", "Markdown", "Gannt chart", "Word Cloud", "Custom"})
+        ShowBox.Items.AddRange(New Object() {"A list", "A table", "Code", "CSV file", "Custom", "Gannt chart", "Graphs", "HTML", "JSON", "Markdown", "PDF", "Plain text file", "Rich text", "Spreadsheet", "Summary", "Word Cloud", "XML"})
         ShowBox.Location = New Point(49, 217)
         ShowBox.Name = "ShowBox"
         ShowBox.Size = New Size(170, 23)
+        ShowBox.Sorted = True
         ShowBox.TabIndex = 14
         ' 
         ' ActText
