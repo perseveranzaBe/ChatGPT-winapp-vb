@@ -23,7 +23,6 @@ Public Class Form1
                 .messages = _messages,
                 .temperature = 0.7
             })
-            RichTextBox1.AppendText("Sending: " + json + Environment.NewLine + Environment.NewLine)
 
             Dim data As New StringContent(json, Encoding.UTF8, "application/json")
 
@@ -70,6 +69,22 @@ Public Class Form1
             End If
 
             inputText = act + create + show + TextBox1.Text
+
+            ActBox.Visible = False
+            CreateBox.Visible = False
+            ShowBox.Visible = False
+            ActText.Visible = False
+            CreateText.Visible = False
+            ShowText.Visible = False
+            Label3.Visible = False
+            Label4.Visible = False
+            Label5.Visible = False
+            Button3.Visible = False
+            Button5.Visible = False
+            Button6.Visible = False
+            Button7.Visible = False
+
+
         Else
             ' If it's not the first message
             inputText = TextBox1.Text
@@ -86,6 +101,16 @@ Public Class Form1
         RichTextBox1.Clear()
         TextBox1.Clear()
         _messages.Clear()
+        ActBox.Visible = True
+        CreateBox.Visible = True
+        ShowBox.Visible = True
+        Label3.Visible = True
+        Label4.Visible = True
+        Label5.Visible = True
+        Button3.Visible = True
+        Button5.Visible = True
+        Button6.Visible = True
+        Button7.Visible = True
     End Sub
 
 
@@ -93,6 +118,20 @@ Public Class Form1
         Dim inputText As String = My.Settings("CAN")
         Dim output As String = Await SendMessageToGPT3Async(inputText)
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
+
+        ActBox.Visible = False
+        CreateBox.Visible = False
+        ShowBox.Visible = False
+        ActText.Visible = False
+        CreateText.Visible = False
+        ShowText.Visible = False
+        Label3.Visible = False
+        Label4.Visible = False
+        Label5.Visible = False
+        Button3.Visible = False
+        Button5.Visible = False
+        Button6.Visible = False
+        Button7.Visible = False
     End Sub
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
@@ -108,12 +147,40 @@ Public Class Form1
         Dim inputText As String = My.Settings("STAN")
         Dim output As String = Await SendMessageToGPT3Async(inputText)
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
+
+        ActBox.Visible = False
+        CreateBox.Visible = False
+        ShowBox.Visible = False
+        ActText.Visible = False
+        CreateText.Visible = False
+        ShowText.Visible = False
+        Label3.Visible = False
+        Label4.Visible = False
+        Label5.Visible = False
+        Button3.Visible = False
+        Button5.Visible = False
+        Button6.Visible = False
+        Button7.Visible = False
     End Sub
 
     Private Async Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim inputText As String = My.Settings("MONGO")
         Dim output As String = Await SendMessageToGPT3Async(inputText)
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
+
+        ActBox.Visible = False
+        CreateBox.Visible = False
+        ShowBox.Visible = False
+        ActText.Visible = False
+        CreateText.Visible = False
+        ShowText.Visible = False
+        Label3.Visible = False
+        Label4.Visible = False
+        Label5.Visible = False
+        Button3.Visible = False
+        Button5.Visible = False
+        Button6.Visible = False
+        Button7.Visible = False
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
