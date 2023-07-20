@@ -45,6 +45,8 @@ Partial Class Form1
         Label5 = New Label()
         MenuStrip1 = New MenuStrip()
         AboutToolStripMenuItem = New ToolStripMenuItem()
+        SettingsToolStripMenuItem = New ToolStripMenuItem()
+        SetButtonBehaviorToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -150,6 +152,8 @@ Partial Class Form1
         ActBox.AllowDrop = True
         ActBox.DropDownStyle = ComboBoxStyle.DropDownList
         ActBox.FormattingEnabled = True
+        ActBox.ImeMode = ImeMode.NoControl
+        ActBox.ItemHeight = 15
         ActBox.Items.AddRange(New Object() {"Accountant", "Advertiser", "Analyst", "Best selling author", "Chief financial officer", "Copywriter", "Custom", "Ghostwriter", "Inventor", "Journalist", "Lawyer", "Marketer", "Mindset Coach", "Project manager", "Prompt engineer", "Therapist", "Website designer"})
         ActBox.Location = New Point(49, 84)
         ActBox.Name = "ActBox"
@@ -231,7 +235,7 @@ Partial Class Form1
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AboutToolStripMenuItem, SettingsToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1211, 24)
@@ -243,6 +247,19 @@ Partial Class Form1
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         AboutToolStripMenuItem.Size = New Size(52, 20)
         AboutToolStripMenuItem.Text = "About"
+        ' 
+        ' SettingsToolStripMenuItem
+        ' 
+        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem})
+        SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        SettingsToolStripMenuItem.Size = New Size(61, 20)
+        SettingsToolStripMenuItem.Text = "Settings"
+        ' 
+        ' SetButtonBehaviorToolStripMenuItem
+        ' 
+        SetButtonBehaviorToolStripMenuItem.Name = "SetButtonBehaviorToolStripMenuItem"
+        SetButtonBehaviorToolStripMenuItem.Size = New Size(180, 22)
+        SetButtonBehaviorToolStripMenuItem.Text = "Set button behavior"
         ' 
         ' Form1
         ' 
@@ -303,4 +320,6 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetButtonBehaviorToolStripMenuItem As ToolStripMenuItem
 End Class

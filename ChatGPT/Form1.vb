@@ -208,4 +208,9 @@ Public Class Form1
         Dim AboutBox As New AboutBox()
         AboutBox.ShowDialog()
     End Sub
+
+    Private Sub SetButtonBehaviorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetButtonBehaviorToolStripMenuItem.Click
+        Dim buttons As New buttons()
+        buttons.ShowDialog()
+    End Sub
 End Class
