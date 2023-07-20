@@ -4,7 +4,7 @@ This software provides a graphical user interface to interact with ChatGPT, a st
 # Features
 The software allows users to:
 
-* Prefix messages with predefined tags:
+* Prefix messages with predefined tags to have a better result:
   * Act as + selection
   * Create a + selection
   * Show as + selection
