@@ -70,19 +70,7 @@ Public Class Form1
 
             inputText = act + create + show + TextBox1.Text
 
-            ActBox.Visible = False
-            CreateBox.Visible = False
-            ShowBox.Visible = False
-            ActText.Visible = False
-            CreateText.Visible = False
-            ShowText.Visible = False
-            Label3.Visible = False
-            Label4.Visible = False
-            Label5.Visible = False
-            Button3.Visible = False
-            Button5.Visible = False
-            Button6.Visible = False
-            Button7.Visible = False
+            ToggleExtraControls(False)
 
 
         Else
@@ -119,23 +107,7 @@ Public Class Form1
         Dim output As String = Await SendMessageToGPT3Async(inputText)
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
-        ActBox.Visible = False
-        CreateBox.Visible = False
-        ShowBox.Visible = False
-        ActText.Visible = False
-        CreateText.Visible = False
-        ShowText.Visible = False
-        Label3.Visible = False
-        Label4.Visible = False
-        Label5.Visible = False
-        Button3.Visible = False
-        Button5.Visible = False
-        Button6.Visible = False
-        Button7.Visible = False
-    End Sub
-
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
+        ToggleExtraControls(False)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -148,19 +120,7 @@ Public Class Form1
         Dim output As String = Await SendMessageToGPT3Async(inputText)
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
-        ActBox.Visible = False
-        CreateBox.Visible = False
-        ShowBox.Visible = False
-        ActText.Visible = False
-        CreateText.Visible = False
-        ShowText.Visible = False
-        Label3.Visible = False
-        Label4.Visible = False
-        Label5.Visible = False
-        Button3.Visible = False
-        Button5.Visible = False
-        Button6.Visible = False
-        Button7.Visible = False
+        ToggleExtraControls(False)
     End Sub
 
     Private Async Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -168,19 +128,7 @@ Public Class Form1
         Dim output As String = Await SendMessageToGPT3Async(inputText)
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
-        ActBox.Visible = False
-        CreateBox.Visible = False
-        ShowBox.Visible = False
-        ActText.Visible = False
-        CreateText.Visible = False
-        ShowText.Visible = False
-        Label3.Visible = False
-        Label4.Visible = False
-        Label5.Visible = False
-        Button3.Visible = False
-        Button5.Visible = False
-        Button6.Visible = False
-        Button7.Visible = False
+        ToggleExtraControls(False)
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -202,14 +150,6 @@ Public Class Form1
         ShowBox.SelectedIndex = 0
         CreateBox.SelectedIndex = 0
 
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -247,5 +187,20 @@ Public Class Form1
             ShowText.Visible = False
             ShowText.Clear()
         End If
+    End Sub
+    Private Sub ToggleExtraControls(isVisible As Boolean)
+        ActBox.Visible = isVisible
+        CreateBox.Visible = isVisible
+        ShowBox.Visible = isVisible
+        ActText.Visible = isVisible
+        CreateText.Visible = isVisible
+        ShowText.Visible = isVisible
+        Label3.Visible = isVisible
+        Label4.Visible = isVisible
+        Label5.Visible = isVisible
+        Button3.Visible = isVisible
+        Button5.Visible = isVisible
+        Button6.Visible = isVisible
+        Button7.Visible = isVisible
     End Sub
 End Class
