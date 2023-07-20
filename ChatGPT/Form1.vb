@@ -203,4 +203,9 @@ Public Class Form1
         Button6.Visible = isVisible
         Button7.Visible = isVisible
     End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        Dim AboutBox As New AboutBox()
+        AboutBox.ShowDialog()
+    End Sub
 End Class

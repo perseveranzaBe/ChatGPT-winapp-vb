@@ -43,11 +43,14 @@ Partial Class Form1
         Label3 = New Label()
         Label4 = New Label()
         Label5 = New Label()
+        MenuStrip1 = New MenuStrip()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(1027, 49)
+        Button1.Location = New Point(1027, 80)
         Button1.Name = "Button1"
         Button1.Size = New Size(155, 42)
         Button1.TabIndex = 0
@@ -56,7 +59,7 @@ Partial Class Form1
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(1027, 97)
+        Button2.Location = New Point(1027, 128)
         Button2.Name = "Button2"
         Button2.Size = New Size(155, 42)
         Button2.TabIndex = 1
@@ -65,7 +68,7 @@ Partial Class Form1
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(64, 636)
+        Button3.Location = New Point(64, 667)
         Button3.Name = "Button3"
         Button3.Size = New Size(155, 42)
         Button3.TabIndex = 2
@@ -74,7 +77,7 @@ Partial Class Form1
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(64, 918)
+        Button4.Location = New Point(64, 949)
         Button4.Name = "Button4"
         Button4.Size = New Size(155, 42)
         Button4.TabIndex = 3
@@ -83,7 +86,7 @@ Partial Class Form1
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Location = New Point(286, 185)
+        RichTextBox1.Location = New Point(286, 216)
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(896, 775)
         RichTextBox1.TabIndex = 5
@@ -91,7 +94,7 @@ Partial Class Form1
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(286, 49)
+        TextBox1.Location = New Point(286, 80)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(723, 90)
         TextBox1.TabIndex = 6
@@ -99,7 +102,7 @@ Partial Class Form1
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(64, 712)
+        Button5.Location = New Point(64, 743)
         Button5.Name = "Button5"
         Button5.Size = New Size(155, 42)
         Button5.TabIndex = 7
@@ -108,7 +111,7 @@ Partial Class Form1
         ' 
         ' Button6
         ' 
-        Button6.Location = New Point(64, 786)
+        Button6.Location = New Point(64, 817)
         Button6.Name = "Button6"
         Button6.Size = New Size(155, 42)
         Button6.TabIndex = 8
@@ -117,7 +120,7 @@ Partial Class Form1
         ' 
         ' Button7
         ' 
-        Button7.Location = New Point(64, 854)
+        Button7.Location = New Point(64, 885)
         Button7.Name = "Button7"
         Button7.Size = New Size(155, 42)
         Button7.TabIndex = 9
@@ -127,7 +130,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(289, 27)
+        Label1.Location = New Point(289, 58)
         Label1.Name = "Label1"
         Label1.Size = New Size(77, 15)
         Label1.TabIndex = 10
@@ -136,7 +139,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(289, 164)
+        Label2.Location = New Point(289, 195)
         Label2.Name = "Label2"
         Label2.Size = New Size(45, 15)
         Label2.TabIndex = 11
@@ -148,7 +151,7 @@ Partial Class Form1
         ActBox.DropDownStyle = ComboBoxStyle.DropDownList
         ActBox.FormattingEnabled = True
         ActBox.Items.AddRange(New Object() {"Accountant", "Advertiser", "Analyst", "Best selling author", "Chief financial officer", "Copywriter", "Custom", "Ghostwriter", "Inventor", "Journalist", "Lawyer", "Marketer", "Mindset Coach", "Project manager", "Prompt engineer", "Therapist", "Website designer"})
-        ActBox.Location = New Point(49, 53)
+        ActBox.Location = New Point(49, 84)
         ActBox.Name = "ActBox"
         ActBox.Size = New Size(170, 23)
         ActBox.Sorted = True
@@ -158,7 +161,7 @@ Partial Class Form1
         ' 
         CreateBox.FormattingEnabled = True
         CreateBox.Items.AddRange(New Object() {"Ad copy", "Analysis", "Article", "Blog post", "Book outline", "Cover letter", "Custom", "Email sequence", "Essay", "Headline", "Product description", "Recipe", "Sales copy", "SEO keywords", "Social media post", "Summary", "Video script"})
-        CreateBox.Location = New Point(49, 132)
+        CreateBox.Location = New Point(49, 163)
         CreateBox.Name = "CreateBox"
         CreateBox.Size = New Size(170, 23)
         CreateBox.Sorted = True
@@ -168,7 +171,7 @@ Partial Class Form1
         ' 
         ShowBox.FormattingEnabled = True
         ShowBox.Items.AddRange(New Object() {"A list", "A table", "Code", "CSV file", "Custom", "Gannt chart", "Graphs", "HTML", "JSON", "Markdown", "PDF", "Plain text file", "Rich text", "Spreadsheet", "Summary", "Word Cloud", "XML"})
-        ShowBox.Location = New Point(49, 217)
+        ShowBox.Location = New Point(49, 248)
         ShowBox.Name = "ShowBox"
         ShowBox.Size = New Size(170, 23)
         ShowBox.Sorted = True
@@ -176,7 +179,7 @@ Partial Class Form1
         ' 
         ' ActText
         ' 
-        ActText.Location = New Point(49, 81)
+        ActText.Location = New Point(49, 112)
         ActText.Name = "ActText"
         ActText.Size = New Size(170, 23)
         ActText.TabIndex = 15
@@ -184,7 +187,7 @@ Partial Class Form1
         ' 
         ' CreateText
         ' 
-        CreateText.Location = New Point(49, 161)
+        CreateText.Location = New Point(49, 192)
         CreateText.Name = "CreateText"
         CreateText.Size = New Size(170, 23)
         CreateText.TabIndex = 16
@@ -192,7 +195,7 @@ Partial Class Form1
         ' 
         ' ShowText
         ' 
-        ShowText.Location = New Point(49, 246)
+        ShowText.Location = New Point(49, 277)
         ShowText.Name = "ShowText"
         ShowText.Size = New Size(170, 23)
         ShowText.TabIndex = 17
@@ -202,7 +205,7 @@ Partial Class Form1
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(49, 35)
+        Label3.Location = New Point(49, 66)
         Label3.Name = "Label3"
         Label3.Size = New Size(39, 15)
         Label3.TabIndex = 18
@@ -211,7 +214,7 @@ Partial Class Form1
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(49, 114)
+        Label4.Location = New Point(49, 145)
         Label4.Name = "Label4"
         Label4.Size = New Size(50, 15)
         Label4.TabIndex = 19
@@ -220,18 +223,33 @@ Partial Class Form1
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(49, 199)
+        Label5.Location = New Point(49, 230)
         Label5.Name = "Label5"
         Label5.Size = New Size(50, 15)
         Label5.TabIndex = 20
         Label5.Text = "Show as"
+        ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {AboutToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(1211, 24)
+        MenuStrip1.TabIndex = 21
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(52, 20)
+        AboutToolStripMenuItem.Text = "About"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.GradientActiveCaption
-        ClientSize = New Size(1211, 993)
+        ClientSize = New Size(1211, 1021)
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
@@ -252,9 +270,13 @@ Partial Class Form1
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        Controls.Add(MenuStrip1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        MainMenuStrip = MenuStrip1
         Name = "Form1"
         Text = "ChatGPT"
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -279,4 +301,6 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 End Class
