@@ -9,20 +9,22 @@ Public Class Form1
 
     Private _messages As New List(Of Object)
 
-    Private Async Function SendMessageToGPT3Async(inputText As String) As Task(Of String)
+    Private Async Function SendMessageToGPT3Async(inputText As String, role As String) As Task(Of String)
         Dim output As String = ""
         Dim apikey As String = My.Settings("ApiKey")
 
         Using client As New HttpClient()
             client.DefaultRequestHeaders.Add("Authorization", "Bearer " & apikey)
 
-            _messages.Add(New With {.role = "user", .content = inputText})
+            _messages.Add(New With {.role = role, .content = inputText})
 
             Dim json As String = JsonConvert.SerializeObject(New With {
-                .model = My.Settings("model"),
-                .messages = _messages,
-                .temperature = 0.7
-            })
+            .model = My.Settings("model"),
+            .messages = _messages,
+            .temperature = 0.7
+        })
+
+            RichTextBox1.AppendText($"Sending to API: {json}" + Environment.NewLine + Environment.NewLine) ' Append the json data to RichTextBox1 for debugging
 
             Dim data As New StringContent(json, Encoding.UTF8, "application/json")
 
@@ -65,7 +67,7 @@ Public Class Form1
             If ShowBox.SelectedItem.ToString() = "Custom" Then
                 show = "Show as " + ShowText.Text + ". "
             Else
-                show = "Show As " + ShowBox.SelectedItem.ToString() + ". " + "about: "
+                show = "Show As " + ShowBox.SelectedItem.ToString() + ". "
             End If
 
             inputText = act + create + show + TextBox1.Text
@@ -81,7 +83,7 @@ Public Class Form1
         RichTextBox1.AppendText("You: " + Environment.NewLine + inputText + Environment.NewLine + Environment.NewLine)
         TextBox1.Clear()
 
-        Dim output As String = Await SendMessageToGPT3Async(inputText)
+        Dim output As String = Await SendMessageToGPT3Async(inputText, "user")
         RichTextBox1.AppendText("ChatGPT: " + output + Environment.NewLine + Environment.NewLine)
     End Sub
 
@@ -101,10 +103,9 @@ Public Class Form1
 
     End Sub
 
-
     Private Async Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim inputText As String = My.Settings("CAN")
-        Dim output As String = Await SendMessageToGPT3Async(inputText)
+        Dim output As String = Await SendMessageToGPT3Async(inputText, "system")
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
         ToggleExtraControls(False)
@@ -112,7 +113,7 @@ Public Class Form1
 
     Private Async Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim inputText As String = My.Settings("STAN")
-        Dim output As String = Await SendMessageToGPT3Async(inputText)
+        Dim output As String = Await SendMessageToGPT3Async(inputText, "system")
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
         ToggleExtraControls(False)
@@ -120,7 +121,7 @@ Public Class Form1
 
     Private Async Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim inputText As String = My.Settings("MONGO")
-        Dim output As String = Await SendMessageToGPT3Async(inputText)
+        Dim output As String = Await SendMessageToGPT3Async(inputText, "system")
         RichTextBox1.AppendText(output + Environment.NewLine + Environment.NewLine)
 
         ToggleExtraControls(False)
@@ -140,8 +141,6 @@ Public Class Form1
         ActBox.SelectedIndex = 0
         ShowBox.SelectedIndex = 0
         CreateBox.SelectedIndex = 0
-
-
     End Sub
 
     Private Sub ActBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ActBox.SelectedIndexChanged
@@ -179,6 +178,7 @@ Public Class Form1
             ShowText.Clear()
         End If
     End Sub
+
     Private Sub ToggleExtraControls(isVisible As Boolean)
         ActBox.Visible = isVisible
         CreateBox.Visible = isVisible
@@ -192,7 +192,6 @@ Public Class Form1
         Button3.Visible = isVisible
         Button5.Visible = isVisible
         Button6.Visible = isVisible
-
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -208,5 +207,10 @@ Public Class Form1
     Private Sub SetAPIKeyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetAPIKeyToolStripMenuItem.Click
         Dim SetAPI As New SetAPI()
         SetAPI.ShowDialog()
+    End Sub
+
+    Private Sub SetModelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetModelToolStripMenuItem.Click
+        Dim getModels As New getModels()
+        getModels.ShowDialog()
     End Sub
 End Class

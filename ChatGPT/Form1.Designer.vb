@@ -42,10 +42,12 @@ Partial Class Form1
         Label4 = New Label()
         Label5 = New Label()
         MenuStrip1 = New MenuStrip()
-        AboutToolStripMenuItem = New ToolStripMenuItem()
         SettingsToolStripMenuItem = New ToolStripMenuItem()
         SetButtonBehaviorToolStripMenuItem = New ToolStripMenuItem()
         SetAPIKeyToolStripMenuItem = New ToolStripMenuItem()
+        SetModelToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
+        ComboBox1 = New ComboBox()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -223,15 +225,9 @@ Partial Class Form1
         MenuStrip1.TabIndex = 21
         MenuStrip1.Text = "MenuStrip1"
         ' 
-        ' AboutToolStripMenuItem
-        ' 
-        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        AboutToolStripMenuItem.Size = New Size(52, 20)
-        AboutToolStripMenuItem.Text = "About"
-        ' 
         ' SettingsToolStripMenuItem
         ' 
-        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, SetAPIKeyToolStripMenuItem})
+        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, SetAPIKeyToolStripMenuItem, SetModelToolStripMenuItem})
         SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         SettingsToolStripMenuItem.Size = New Size(61, 20)
         SettingsToolStripMenuItem.Text = "Settings"
@@ -248,12 +244,33 @@ Partial Class Form1
         SetAPIKeyToolStripMenuItem.Size = New Size(180, 22)
         SetAPIKeyToolStripMenuItem.Text = "Set API Key"
         ' 
+        ' SetModelToolStripMenuItem
+        ' 
+        SetModelToolStripMenuItem.Name = "SetModelToolStripMenuItem"
+        SetModelToolStripMenuItem.Size = New Size(180, 22)
+        SetModelToolStripMenuItem.Text = "Set model"
+        ' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(52, 20)
+        AboutToolStripMenuItem.Text = "About"
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(56, 346)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(121, 23)
+        ComboBox1.TabIndex = 22
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.GradientActiveCaption
         ClientSize = New Size(1211, 1021)
+        Controls.Add(ComboBox1)
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
@@ -306,4 +323,6 @@ Partial Class Form1
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetButtonBehaviorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetAPIKeyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetModelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
