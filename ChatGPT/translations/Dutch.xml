@@ -1,0 +1,99 @@
+﻿<root>
+  <data name="Form1.Text">
+    <value>ChatGPT</value>
+  </data>
+  <data name="Form1.Label3.Text">
+    <value>Handelen als</value>
+  </data>
+  <data name="Form1.Label4.Text">
+    <value>Creëer als</value>
+  </data>
+  <data name="Form1.Label5.Text">
+    <value>Toon als</value>
+  </data>
+  <data name="Form1.Label1.Text">
+    <value>Voer prompt in</value>
+  </data>
+  <data name="Form1.Label2.Text">
+    <value>Geschiedenis</value>
+  </data>
+  <data name="Form1.Button1.Text">
+    <value>Verstuur</value>
+  </data>
+  <data name="Form1.Button2.Text">
+    <value>Wis</value>
+  </data>
+  <data name="Form1.SettingsToolStripMenuItem.Text">
+    <value>Instellingen</value>
+  </data>
+  <data name="Form1.SetButtonBehaviorToolStripMenuItem.Text">
+    <value>Stel knopgedrag in</value>
+  </data>
+  <data name="Form1.SetAPIKeyToolStripMenuItem.Text">
+    <value>Stel API-sleutel in</value>
+  </data>
+  <data name="Form1.SetModelToolStripMenuItem.Text">
+    <value>Stel GPT-model in</value>
+  </data>
+  <data name="Form1.AboutToolStripMenuItem.Text">
+    <value>Over</value>
+  </data>
+
+  <data name="getModels.Text">
+    <value>Stel model in</value>
+  </data>
+  <data name="getModels.btnSaveModel.Text">
+    <value>Model opslaan</value>
+  </data>
+
+  <data name="SetAPI.Text">
+    <value>Stel API-sleutel in</value>
+  </data>
+  <data name="SetAPI.Label1.Text">
+    <value>Voer nieuwe API-sleutel in</value>
+  </data>
+  <data name="SetAPI.Button1.Text">
+    <value>API-sleutel opslaan</value>
+  </data>
+  <data name="SetAPI.Button2.Text">
+    <value>Annuleren</value>
+  </data>
+
+  <data name="buttons.Text">
+    <value>Knopgedrag</value>
+  </data>
+  <data name="buttons.Label1.Text">
+    <value>Eerste knop opschrift</value>
+  </data>
+  <data name="buttons.Label2.Text">
+    <value>Eerste knop prompt</value>
+  </data>
+  <data name="buttons.Label3.Text">
+    <value>Tweede knop opschrift</value>
+  </data>
+  <data name="buttons.Label4.Text">
+    <value>Tweede knop prompt</value>
+  </data>
+  <data name="buttons.Label5.Text">
+    <value>Derde knop opschrift</value>
+  </data>
+  <data name="buttons.Label6.Text">
+    <value>Derde knop prompt</value>
+  </data>
+  <data name="buttons.Button1.Text">
+    <value>Opslaan</value>
+  </data>
+  <data name="buttons.Button2.Text">
+    <value>Annuleren</value>
+  </data>
+
+  <data name="AboutBox.Text">
+    <value>Over</value>
+  </data>
+  <data name="AboutBox.Label1.Text">
+    <value>Dit programma is gemaakt door Dave Bosman als een proof of concept in Visual Basic</value>
+  </data>
+  <data name="AboutBox.Button1.Text">
+    <value>Sluiten</value>
+  </data>
+</root>

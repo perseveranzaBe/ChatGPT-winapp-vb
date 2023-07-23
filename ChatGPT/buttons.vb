@@ -20,6 +20,10 @@ Public Class buttons
         RichTextBox2.Text = txt4
         TextBox3.Text = txt5
         RichTextBox3.Text = txt6
+        'get language for form
+        Dim lang As String = ""
+        lang = My.Settings("language")
+        TranslateForm(Me, lang)
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

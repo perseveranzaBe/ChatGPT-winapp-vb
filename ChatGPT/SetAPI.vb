@@ -1,6 +1,9 @@
 ﻿Public Class SetAPI
     Private Sub SetAPI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'get language for form
+        Dim lang As String = ""
+        lang = My.Settings("language")
+        TranslateForm(Me, lang)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

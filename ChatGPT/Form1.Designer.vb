@@ -46,7 +46,11 @@ Partial Class Form1
         SetButtonBehaviorToolStripMenuItem = New ToolStripMenuItem()
         SetAPIKeyToolStripMenuItem = New ToolStripMenuItem()
         SetModelToolStripMenuItem = New ToolStripMenuItem()
+        LanguageToolStripMenuItem = New ToolStripMenuItem()
+        EnglishToolStripMenuItem = New ToolStripMenuItem()
+        NederlandsToolStripMenuItem = New ToolStripMenuItem()
         AboutToolStripMenuItem = New ToolStripMenuItem()
+        FrançaisToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -226,7 +230,7 @@ Partial Class Form1
         ' 
         ' SettingsToolStripMenuItem
         ' 
-        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, SetAPIKeyToolStripMenuItem, SetModelToolStripMenuItem})
+        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, SetAPIKeyToolStripMenuItem, SetModelToolStripMenuItem, LanguageToolStripMenuItem})
         SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         SettingsToolStripMenuItem.Size = New Size(61, 20)
         SettingsToolStripMenuItem.Text = "Settings"
@@ -234,26 +238,51 @@ Partial Class Form1
         ' SetButtonBehaviorToolStripMenuItem
         ' 
         SetButtonBehaviorToolStripMenuItem.Name = "SetButtonBehaviorToolStripMenuItem"
-        SetButtonBehaviorToolStripMenuItem.Size = New Size(178, 22)
+        SetButtonBehaviorToolStripMenuItem.Size = New Size(180, 22)
         SetButtonBehaviorToolStripMenuItem.Text = "Set button behavior"
         ' 
         ' SetAPIKeyToolStripMenuItem
         ' 
         SetAPIKeyToolStripMenuItem.Name = "SetAPIKeyToolStripMenuItem"
-        SetAPIKeyToolStripMenuItem.Size = New Size(178, 22)
+        SetAPIKeyToolStripMenuItem.Size = New Size(180, 22)
         SetAPIKeyToolStripMenuItem.Text = "Set API Key"
         ' 
         ' SetModelToolStripMenuItem
         ' 
         SetModelToolStripMenuItem.Name = "SetModelToolStripMenuItem"
-        SetModelToolStripMenuItem.Size = New Size(178, 22)
+        SetModelToolStripMenuItem.Size = New Size(180, 22)
         SetModelToolStripMenuItem.Text = "Set model"
+        ' 
+        ' LanguageToolStripMenuItem
+        ' 
+        LanguageToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {EnglishToolStripMenuItem, NederlandsToolStripMenuItem, FrançaisToolStripMenuItem})
+        LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
+        LanguageToolStripMenuItem.Size = New Size(180, 22)
+        LanguageToolStripMenuItem.Text = "Language"
+        ' 
+        ' EnglishToolStripMenuItem
+        ' 
+        EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
+        EnglishToolStripMenuItem.Size = New Size(180, 22)
+        EnglishToolStripMenuItem.Text = "English"
+        ' 
+        ' NederlandsToolStripMenuItem
+        ' 
+        NederlandsToolStripMenuItem.Name = "NederlandsToolStripMenuItem"
+        NederlandsToolStripMenuItem.Size = New Size(180, 22)
+        NederlandsToolStripMenuItem.Text = "Nederlands"
         ' 
         ' AboutToolStripMenuItem
         ' 
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         AboutToolStripMenuItem.Size = New Size(52, 20)
         AboutToolStripMenuItem.Text = "About"
+        ' 
+        ' FrançaisToolStripMenuItem
+        ' 
+        FrançaisToolStripMenuItem.Name = "FrançaisToolStripMenuItem"
+        FrançaisToolStripMenuItem.Size = New Size(180, 22)
+        FrançaisToolStripMenuItem.Text = "français"
         ' 
         ' Form1
         ' 
@@ -314,4 +343,8 @@ Partial Class Form1
     Friend WithEvents SetButtonBehaviorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetAPIKeyToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SetModelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LanguageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnglishToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NederlandsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FrançaisToolStripMenuItem As ToolStripMenuItem
 End Class

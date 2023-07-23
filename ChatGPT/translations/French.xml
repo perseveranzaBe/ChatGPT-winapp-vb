@@ -1,0 +1,99 @@
+﻿<root>
+  <data name="Form1.Text">
+    <value>ChatGPT</value>
+  </data>
+  <data name="Form1.Label3.Text">
+    <value>Agir comme</value>
+  </data>
+  <data name="Form1.Label4.Text">
+    <value>Créer comme</value>
+  </data>
+  <data name="Form1.Label5.Text">
+    <value>Afficher comme</value>
+  </data>
+  <data name="Form1.Label1.Text">
+    <value>Entrer une invite</value>
+  </data>
+  <data name="Form1.Label2.Text">
+    <value>Historique</value>
+  </data>
+  <data name="Form1.Button1.Text">
+    <value>Envoyer</value>
+  </data>
+  <data name="Form1.Button2.Text">
+    <value>Effacer</value>
+  </data>
+  <data name="Form1.SettingsToolStripMenuItem.Text">
+    <value>Paramètres</value>
+  </data>
+  <data name="Form1.SetButtonBehaviorToolStripMenuItem.Text">
+    <value>Définir le comportement du bouton</value>
+  </data>
+  <data name="Form1.SetAPIKeyToolStripMenuItem.Text">
+    <value>Définir la clé API</value>
+  </data>
+  <data name="Form1.SetModelToolStripMenuItem.Text">
+    <value>Définir le modèle GPT</value>
+  </data>
+  <data name="Form1.AboutToolStripMenuItem.Text">
+    <value>À propos</value>
+  </data>
+
+  <data name="getModels.Text">
+    <value>Définir le modèle</value>
+  </data>
+  <data name="getModels.btnSaveModel.Text">
+    <value>Sauvegarder le modèle</value>
+  </data>
+
+  <data name="SetAPI.Text">
+    <value>Définir la clé API</value>
+  </data>
+  <data name="SetAPI.Label1.Text">
+    <value>Entrez la nouvelle clé API</value>
+  </data>
+  <data name="SetAPI.Button1.Text">
+    <value>Sauvegarder la clé API</value>
+  </data>
+  <data name="SetAPI.Button2.Text">
+    <value>Annuler</value>
+  </data>
+
+  <data name="buttons.Text">
+    <value>Comportement du bouton</value>
+  </data>
+  <data name="buttons.Label1.Text">
+    <value>Titre du premier bouton</value>
+  </data>
+  <data name="buttons.Label2.Text">
+    <value>Invite du premier bouton</value>
+  </data>
+  <data name="buttons.Label3.Text">
+    <value>Titre du deuxième bouton</value>
+  </data>
+  <data name="buttons.Label4.Text">
+    <value>Invite du deuxième bouton</value>
+  </data>
+  <data name="buttons.Label5.Text">
+    <value>Titre du troisième bouton</value>
+  </data>
+  <data name="buttons.Label6.Text">
+    <value>Invite du troisième bouton</value>
+  </data>
+  <data name="buttons.Button1.Text">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="buttons.Button2.Text">
+    <value>Annuler</value>
+  </data>
+
+  <data name="AboutBox.Text">
+    <value>À propos</value>
+  </data>
+  <data name="AboutBox.Label1.Text">
+    <value>Ce programme a été créé par Dave Bosman comme une preuve de concept en Visual Basic</value>
+  </data>
+  <data name="AboutBox.Button1.Text">
+    <value>Fermer</value>
+  </data>
+</root>

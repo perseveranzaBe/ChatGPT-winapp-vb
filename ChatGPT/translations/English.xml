@@ -1,0 +1,99 @@
+﻿<root>
+  <data name="Form1.Text">
+    <value>ChatGPT</value>
+  </data>
+  <data name="Form1.Label3.Text">
+    <value>Act as</value>
+  </data>
+  <data name="Form1.Label4.Text">
+    <value>Create as</value>
+  </data>
+  <data name="Form1.Label5.Text">
+    <value>Show as</value>
+  </data>
+  <data name="Form1.Label1.Text">
+    <value>Enter prompt</value>
+  </data>
+  <data name="Form1.Label2.Text">
+    <value>History</value>
+  </data>
+  <data name="Form1.Button1.Text">
+    <value>Send</value>
+  </data>
+  <data name="Form1.Button2.Text">
+    <value>Clear</value>
+  </data>
+  <data name="Form1.SettingsToolStripMenuItem.Text">
+    <value>Settings</value>
+  </data>
+  <data name="Form1.SetButtonBehaviorToolStripMenuItem.Text">
+    <value>Set button behavior</value>
+  </data>
+  <data name="Form1.SetAPIKeyToolStripMenuItem.Text">
+    <value>Set API key</value>
+  </data>
+  <data name="Form1.SetModelToolStripMenuItem.Text">
+    <value>Set GPT model</value>
+  </data>
+  <data name="Form1.AboutToolStripMenuItem.Text">
+    <value>About</value>
+  </data>
+
+  <data name="getModels.Text">
+    <value>Set model</value>
+  </data>
+  <data name="getModels.btnSaveModel.Text">
+    <value>Save model</value>
+  </data>
+
+  <data name="SetAPI.Text">
+    <value>Set API key</value>
+  </data>
+  <data name="SetAPI.Label1.Text">
+    <value>Enter new api key</value>
+  </data>
+  <data name="SetAPI.Button1.Text">
+    <value>Save API key</value>
+  </data>
+  <data name="SetAPI.Button2.Text">
+    <value>Cancel</value>
+  </data>
+
+  <data name="buttons.Text">
+    <value>Button Behavior</value>
+  </data>
+  <data name="buttons.Label1.Text">
+    <value>First button caption</value>
+  </data>
+  <data name="buttons.Label2.Text">
+    <value>First button prompt</value>
+  </data>
+  <data name="buttons.Label3.Text">
+    <value>Second button caption</value>
+  </data>
+  <data name="buttons.Label4.Text">
+    <value>Second button prompt</value>
+  </data>
+  <data name="buttons.Label5.Text">
+    <value>Third button caption</value>
+  </data>
+  <data name="buttons.Label6.Text">
+    <value>Third button prompt</value>
+  </data>
+  <data name="buttons.Button1.Text">
+    <value>Save</value>
+  </data>
+  <data name="buttons.Button2.Text">
+    <value>Cancel</value>
+  </data>
+
+  <data name="AboutBox.Text">
+    <value>About</value>
+  </data>
+  <data name="AboutBox.Label1.Text">
+    <value>This program is created by Dave Bosman as a proof of concept in visual basic</value>
+  </data>
+  <data name="AboutBox.Button1.Text">
+    <value>Close</value>
+  </data>
+</root>

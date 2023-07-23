@@ -24,7 +24,7 @@ Public Class Form1
             .temperature = 0.7
         })
 
-            RichTextBox1.AppendText($"Sending to API: {json}" + Environment.NewLine + Environment.NewLine) ' Append the json data to RichTextBox1 for debugging
+            'RichTextBox1.AppendText($"Sending to API: {json}" + Environment.NewLine + Environment.NewLine) ' Append the json data to RichTextBox1 for debugging
 
             Dim data As New StringContent(json, Encoding.UTF8, "application/json")
 
@@ -53,21 +53,21 @@ Public Class Form1
         ' If it's the first message
         If _messages.Count = 0 Then
             If ActBox.SelectedItem.ToString() = "Custom" Then
-                act = "Act as " + ActText.Text + ". "
+                act = Label3.Text + " " + ActText.Text + ". "
             Else
-                act = "Act as " + ActBox.SelectedItem.ToString() + ". "
+                act = Label3.Text + " " + ActBox.SelectedItem.ToString() + ". "
             End If
 
             If CreateBox.SelectedItem.ToString() = "Custom" Then
-                create = "Create As " + CreateText.Text + ". "
+                create = Label4.Text + " " + CreateText.Text + ". "
             Else
-                create = "Create As " + CreateBox.SelectedItem.ToString() + ". "
+                create = Label4.Text + " " + CreateBox.SelectedItem.ToString() + ". "
             End If
 
             If ShowBox.SelectedItem.ToString() = "Custom" Then
-                show = "Show as " + ShowText.Text + ". "
+                show = Label5.Text + " " + ShowText.Text + ". "
             Else
-                show = "Show As " + ShowBox.SelectedItem.ToString() + ". "
+                show = Label5.Text + " " + ShowBox.SelectedItem.ToString() + ". "
             End If
 
             inputText = act + create + show + TextBox1.Text
@@ -137,6 +137,11 @@ Public Class Form1
         Button3.Text = btn3
         Button5.Text = btn5
         Button6.Text = btn6
+
+        'get language for form
+        Dim lang As String = ""
+        lang = My.Settings("language")
+        TranslateForm(Me, lang)
 
         ActBox.SelectedIndex = 0
         ShowBox.SelectedIndex = 0
@@ -212,5 +217,27 @@ Public Class Form1
     Private Sub SetModelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetModelToolStripMenuItem.Click
         Dim getModels As New getModels()
         getModels.ShowDialog()
+    End Sub
+
+    Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
+        TranslateForm(Me, "English")
+        My.Settings.language = "English"
+        My.Settings.Save()
+    End Sub
+
+    Private Sub NederlandsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NederlandsToolStripMenuItem.Click
+        TranslateForm(Me, "Dutch")
+        My.Settings.language = "Dutch"
+        My.Settings.Save()
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub FrançaisToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FrançaisToolStripMenuItem.Click
+        TranslateForm(Me, "French")
+        My.Settings.language = "French"
+        My.Settings.Save()
     End Sub
 End Class

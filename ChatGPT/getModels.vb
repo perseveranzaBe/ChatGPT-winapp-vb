@@ -9,6 +9,11 @@ Public Class getModels
     Dim modelsUrl As String = "https://api.openai.com/v1/models"
 
     Private Async Sub getModels_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'get language for form
+        Dim lang As String = ""
+        lang = My.Settings("language")
+        TranslateForm(Me, lang)
+
         client = New HttpClient()
         client.DefaultRequestHeaders.Add("Authorization", "Bearer " + ApiKey)
 
