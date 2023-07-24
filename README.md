@@ -4,12 +4,12 @@ This software provides a graphical user interface to interact with ChatGPT, a st
 # Features
 The software allows users to:
 
-* Prefix messages with predefined tags to have a better result:
+* Prefix messages with predefined tags to have a better result: (these can be modified but still requires a reload of the application to reflect the changes)
   * Act as + selection
   * Create a + selection
   * Show as + selection
-* Automatically follow the tag with 'About: ' + the prompt entered by the user.
 * Pre-configure and launch requests as three characters: CAN, STAN, and Mongo Tom. Once the corresponding buttons are clicked, a preconstructed script is automatically sent to ChatGPT.
+* Multi language support
 
 # Planned Features
 In the future, more functionalities will be added to the software as ideas develop.
