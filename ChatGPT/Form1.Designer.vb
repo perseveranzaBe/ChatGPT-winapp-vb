@@ -49,8 +49,10 @@ Partial Class Form1
         LanguageToolStripMenuItem = New ToolStripMenuItem()
         EnglishToolStripMenuItem = New ToolStripMenuItem()
         NederlandsToolStripMenuItem = New ToolStripMenuItem()
-        AboutToolStripMenuItem = New ToolStripMenuItem()
         FrançaisToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
+        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        ModifyDropdownValuesToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -230,7 +232,7 @@ Partial Class Form1
         ' 
         ' SettingsToolStripMenuItem
         ' 
-        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, SetAPIKeyToolStripMenuItem, SetModelToolStripMenuItem, LanguageToolStripMenuItem})
+        SettingsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SetButtonBehaviorToolStripMenuItem, ModifyDropdownValuesToolStripMenuItem, SetAPIKeyToolStripMenuItem, SetModelToolStripMenuItem, LanguageToolStripMenuItem})
         SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         SettingsToolStripMenuItem.Size = New Size(61, 20)
         SettingsToolStripMenuItem.Text = "Settings"
@@ -238,39 +240,45 @@ Partial Class Form1
         ' SetButtonBehaviorToolStripMenuItem
         ' 
         SetButtonBehaviorToolStripMenuItem.Name = "SetButtonBehaviorToolStripMenuItem"
-        SetButtonBehaviorToolStripMenuItem.Size = New Size(180, 22)
+        SetButtonBehaviorToolStripMenuItem.Size = New Size(206, 22)
         SetButtonBehaviorToolStripMenuItem.Text = "Set button behavior"
         ' 
         ' SetAPIKeyToolStripMenuItem
         ' 
         SetAPIKeyToolStripMenuItem.Name = "SetAPIKeyToolStripMenuItem"
-        SetAPIKeyToolStripMenuItem.Size = New Size(180, 22)
+        SetAPIKeyToolStripMenuItem.Size = New Size(206, 22)
         SetAPIKeyToolStripMenuItem.Text = "Set API Key"
         ' 
         ' SetModelToolStripMenuItem
         ' 
         SetModelToolStripMenuItem.Name = "SetModelToolStripMenuItem"
-        SetModelToolStripMenuItem.Size = New Size(180, 22)
+        SetModelToolStripMenuItem.Size = New Size(206, 22)
         SetModelToolStripMenuItem.Text = "Set model"
         ' 
         ' LanguageToolStripMenuItem
         ' 
         LanguageToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {EnglishToolStripMenuItem, NederlandsToolStripMenuItem, FrançaisToolStripMenuItem})
         LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
-        LanguageToolStripMenuItem.Size = New Size(180, 22)
+        LanguageToolStripMenuItem.Size = New Size(206, 22)
         LanguageToolStripMenuItem.Text = "Language"
         ' 
         ' EnglishToolStripMenuItem
         ' 
         EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        EnglishToolStripMenuItem.Size = New Size(180, 22)
+        EnglishToolStripMenuItem.Size = New Size(134, 22)
         EnglishToolStripMenuItem.Text = "English"
         ' 
         ' NederlandsToolStripMenuItem
         ' 
         NederlandsToolStripMenuItem.Name = "NederlandsToolStripMenuItem"
-        NederlandsToolStripMenuItem.Size = New Size(180, 22)
+        NederlandsToolStripMenuItem.Size = New Size(134, 22)
         NederlandsToolStripMenuItem.Text = "Nederlands"
+        ' 
+        ' FrançaisToolStripMenuItem
+        ' 
+        FrançaisToolStripMenuItem.Name = "FrançaisToolStripMenuItem"
+        FrançaisToolStripMenuItem.Size = New Size(134, 22)
+        FrançaisToolStripMenuItem.Text = "français"
         ' 
         ' AboutToolStripMenuItem
         ' 
@@ -278,11 +286,11 @@ Partial Class Form1
         AboutToolStripMenuItem.Size = New Size(52, 20)
         AboutToolStripMenuItem.Text = "About"
         ' 
-        ' FrançaisToolStripMenuItem
+        ' ModifyDropdownValuesToolStripMenuItem
         ' 
-        FrançaisToolStripMenuItem.Name = "FrançaisToolStripMenuItem"
-        FrançaisToolStripMenuItem.Size = New Size(180, 22)
-        FrançaisToolStripMenuItem.Text = "français"
+        ModifyDropdownValuesToolStripMenuItem.Name = "ModifyDropdownValuesToolStripMenuItem"
+        ModifyDropdownValuesToolStripMenuItem.Size = New Size(206, 22)
+        ModifyDropdownValuesToolStripMenuItem.Text = "Modify dropdown values"
         ' 
         ' Form1
         ' 
@@ -347,4 +355,6 @@ Partial Class Form1
     Friend WithEvents EnglishToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NederlandsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FrançaisToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ModifyDropdownValuesToolStripMenuItem As ToolStripMenuItem
 End Class

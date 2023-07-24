@@ -29,5 +29,14 @@
     <Setting Name="language" Type="System.String" Scope="User">
       <Value Profile="(Default)">Dutch</Value>
     </Setting>
+    <Setting Name="ACT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Accountant,Advertiser,Analyst,Best selling author,Chief financial officer,Copywriter,Ghostwriter,Inventor,Journalist,Lawyer,Marketer,Mindset Coach,Project manager,Prompt engineer,Therapist,Website designer</Value>
+    </Setting>
+    <Setting Name="CREATE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ad copy,Analysis,Article,Blog post,Book outline,Cover letter,Email sequence,Essay,Headline,Product description,Recipe,Sales copy,SEO keywords,Social media post,Summary,Video script</Value>
+    </Setting>
+    <Setting Name="SHOW" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A list,A table,Code,CSV file,Gannt chart,Graphs,HTML,JSON,Markdown,PDF,Plain text file,Rich text,Spreadsheet,Summary,Word Cloud,XML</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

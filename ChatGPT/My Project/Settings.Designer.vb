@@ -202,6 +202,47 @@ Namespace My
                 Me("language") = value
             End Set
         End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+         Global.System.Configuration.DefaultSettingValueAttribute("Accountant,Advertiser,Analyst,Best selling author,Chief financial officer,Copywri" &
+            "ter,Ghostwriter,Inventor,Journalist,Lawyer,Marketer,Mindset Coach,Project manage" &
+            "r,Prompt engineer,Therapist,Website designer")>
+        Public Property ACT() As String
+            Get
+                Return CType(Me("ACT"), String)
+            End Get
+            Set
+                Me("ACT") = Value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+         Global.System.Configuration.DefaultSettingValueAttribute("Ad copy,Analysis,Article,Blog post,Book outline,Cover letter,Email sequence,Essay" &
+            ",Headline,Product description,Recipe,Sales copy,SEO keywords,Social media post,S" &
+            "ummary,Video script")>
+        Public Property CREATE() As String
+            Get
+                Return CType(Me("CREATE"), String)
+            End Get
+            Set
+                Me("CREATE") = Value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),
+         Global.System.Configuration.DefaultSettingValueAttribute("A list,A table,Code,CSV file,Gannt chart,Graphs,HTML,JSON,Markdown,PDF,Plain text" &
+            " file,Rich text,Spreadsheet,Summary,Word Cloud,XML")>
+        Public Property SHOW() As String
+            Get
+                Return CType(Me("SHOW"), String)
+            End Get
+            Set
+                Me("SHOW") = Value
+            End Set
+        End Property
     End Class
 End Namespace
 

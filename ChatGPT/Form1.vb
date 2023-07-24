@@ -128,6 +128,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PopulateComboBox()
         Dim btn3 As String = ""
         Dim btn5 As String = ""
         Dim btn6 As String = ""
@@ -239,5 +240,38 @@ Public Class Form1
         TranslateForm(Me, "French")
         My.Settings.language = "French"
         My.Settings.Save()
+    End Sub
+
+    Private Sub PopulateComboBox()
+        ' Clear the ComboBox
+        ActBox.Items.Clear()
+        CreateBox.Items.Clear()
+        ShowBox.Items.Clear()
+
+        ' Get the 'ACT' setting
+        Dim actSetting As String = My.Settings.ACT
+        Dim createSetting As String = My.Settings.CREATE
+        Dim showSetting As String = My.Settings.SHOW
+
+        ' Split the string into an array
+        Dim valuesAct As String() = actSetting.Split(","c)
+        Dim valuesCreate As String() = createSetting.Split(","c)
+        Dim valuesShow As String() = showSetting.Split(","c)
+
+        ' Add each value to the ComboBox
+        For Each value As String In valuesAct
+            ActBox.Items.Add(value.Trim())
+        Next
+        For Each value As String In valuesCreate
+            CreateBox.Items.Add(value.Trim())
+        Next
+        For Each value As String In valuesShow
+            ShowBox.Items.Add(value.Trim())
+        Next
+    End Sub
+
+    Private Sub ModifyDropdownValuesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyDropdownValuesToolStripMenuItem.Click
+        Dim ActCreateShowSetting As New ActCreateShowSetting()
+        ActCreateShowSetting.ShowDialog()
     End Sub
 End Class
