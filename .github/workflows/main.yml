@@ -28,5 +28,8 @@ jobs:
     - name: Build project
       run: msbuild ChatGPT.sln /p:Configuration=Release
 
-    - name: List all files
-      run: Get-ChildItem -Path . -Recurse
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: chatgpt-app
+        path: ChatGPT-winapp-vb/ChatGPT/bin/Release/net6.0-windows/**
