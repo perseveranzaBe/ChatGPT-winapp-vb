@@ -52,24 +52,9 @@ Public Class Form1
         Dim inputText As String
         ' If it's the first message
         If _messages.Count = 0 Then
-            If ActBox.SelectedItem.ToString() = "Custom" Then
-                act = Label3.Text + " " + ActText.Text + ". "
-            Else
-                act = Label3.Text + " " + ActBox.SelectedItem.ToString() + ". "
-            End If
-
-            If CreateBox.SelectedItem.ToString() = "Custom" Then
-                create = Label4.Text + " " + CreateText.Text + ". "
-            Else
-                create = Label4.Text + " " + CreateBox.SelectedItem.ToString() + ". "
-            End If
-
-            If ShowBox.SelectedItem.ToString() = "Custom" Then
-                show = Label5.Text + " " + ShowText.Text + ". "
-            Else
-                show = Label5.Text + " " + ShowBox.SelectedItem.ToString() + ". "
-            End If
-
+            act = Label3.Text + " " + ActBox.SelectedItem.ToString() + ". "
+            create = Label4.Text + " " + CreateBox.SelectedItem.ToString() + ". "
+            show = Label5.Text + " " + ShowBox.SelectedItem.ToString() + ". "
             inputText = act + create + show + TextBox1.Text
 
             ToggleExtraControls(False)
@@ -149,49 +134,12 @@ Public Class Form1
         CreateBox.SelectedIndex = 0
     End Sub
 
-    Private Sub ActBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ActBox.SelectedIndexChanged
-        ' Check if "Custom" option is selected
-        If ActBox.SelectedItem.ToString() = "Custom" Then
-            ' Make ActText field visible
-            ActText.Visible = True
-        Else
-            ' Make ActText field invisible and clear its contents
-            ActText.Visible = False
-            ActText.Clear()
-        End If
-    End Sub
 
-    Private Sub CreateBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CreateBox.SelectedIndexChanged
-        ' Check if "Custom" option is selected
-        If CreateBox.SelectedItem.ToString() = "Custom" Then
-            ' Make ActText field visible
-            CreateText.Visible = True
-        Else
-            ' Make ActText field invisible and clear its contents
-            CreateText.Visible = False
-            CreateText.Clear()
-        End If
-    End Sub
-
-    Private Sub ShowBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ShowBox.SelectedIndexChanged
-        ' Check if "Custom" option is selected
-        If ShowBox.SelectedItem.ToString() = "Custom" Then
-            ' Make ActText field visible
-            ShowText.Visible = True
-        Else
-            ' Make ActText field invisible and clear its contents
-            ShowText.Visible = False
-            ShowText.Clear()
-        End If
-    End Sub
 
     Private Sub ToggleExtraControls(isVisible As Boolean)
         ActBox.Visible = isVisible
         CreateBox.Visible = isVisible
         ShowBox.Visible = isVisible
-        ActText.Visible = isVisible
-        CreateText.Visible = isVisible
-        ShowText.Visible = isVisible
         Label3.Visible = isVisible
         Label4.Visible = isVisible
         Label5.Visible = isVisible

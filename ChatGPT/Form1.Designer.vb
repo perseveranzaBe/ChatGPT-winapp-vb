@@ -35,15 +35,13 @@ Partial Class Form1
         ActBox = New ComboBox()
         CreateBox = New ComboBox()
         ShowBox = New ComboBox()
-        ActText = New TextBox()
-        CreateText = New TextBox()
-        ShowText = New TextBox()
         Label3 = New Label()
         Label4 = New Label()
         Label5 = New Label()
         MenuStrip1 = New MenuStrip()
         SettingsToolStripMenuItem = New ToolStripMenuItem()
         SetButtonBehaviorToolStripMenuItem = New ToolStripMenuItem()
+        ModifyDropdownValuesToolStripMenuItem = New ToolStripMenuItem()
         SetAPIKeyToolStripMenuItem = New ToolStripMenuItem()
         SetModelToolStripMenuItem = New ToolStripMenuItem()
         LanguageToolStripMenuItem = New ToolStripMenuItem()
@@ -52,7 +50,6 @@ Partial Class Form1
         FrançaisToolStripMenuItem = New ToolStripMenuItem()
         AboutToolStripMenuItem = New ToolStripMenuItem()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
-        ModifyDropdownValuesToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -169,30 +166,6 @@ Partial Class Form1
         ShowBox.Sorted = True
         ShowBox.TabIndex = 14
         ' 
-        ' ActText
-        ' 
-        ActText.Location = New Point(49, 112)
-        ActText.Name = "ActText"
-        ActText.Size = New Size(170, 23)
-        ActText.TabIndex = 15
-        ActText.Visible = False
-        ' 
-        ' CreateText
-        ' 
-        CreateText.Location = New Point(49, 192)
-        CreateText.Name = "CreateText"
-        CreateText.Size = New Size(170, 23)
-        CreateText.TabIndex = 16
-        CreateText.Visible = False
-        ' 
-        ' ShowText
-        ' 
-        ShowText.Location = New Point(49, 277)
-        ShowText.Name = "ShowText"
-        ShowText.Size = New Size(170, 23)
-        ShowText.TabIndex = 17
-        ShowText.Visible = False
-        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -243,6 +216,12 @@ Partial Class Form1
         SetButtonBehaviorToolStripMenuItem.Size = New Size(206, 22)
         SetButtonBehaviorToolStripMenuItem.Text = "Set button behavior"
         ' 
+        ' ModifyDropdownValuesToolStripMenuItem
+        ' 
+        ModifyDropdownValuesToolStripMenuItem.Name = "ModifyDropdownValuesToolStripMenuItem"
+        ModifyDropdownValuesToolStripMenuItem.Size = New Size(206, 22)
+        ModifyDropdownValuesToolStripMenuItem.Text = "Modify dropdown values"
+        ' 
         ' SetAPIKeyToolStripMenuItem
         ' 
         SetAPIKeyToolStripMenuItem.Name = "SetAPIKeyToolStripMenuItem"
@@ -265,19 +244,19 @@ Partial Class Form1
         ' EnglishToolStripMenuItem
         ' 
         EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        EnglishToolStripMenuItem.Size = New Size(134, 22)
+        EnglishToolStripMenuItem.Size = New Size(180, 22)
         EnglishToolStripMenuItem.Text = "English"
         ' 
         ' NederlandsToolStripMenuItem
         ' 
         NederlandsToolStripMenuItem.Name = "NederlandsToolStripMenuItem"
-        NederlandsToolStripMenuItem.Size = New Size(134, 22)
+        NederlandsToolStripMenuItem.Size = New Size(180, 22)
         NederlandsToolStripMenuItem.Text = "Nederlands"
         ' 
         ' FrançaisToolStripMenuItem
         ' 
         FrançaisToolStripMenuItem.Name = "FrançaisToolStripMenuItem"
-        FrançaisToolStripMenuItem.Size = New Size(134, 22)
+        FrançaisToolStripMenuItem.Size = New Size(180, 22)
         FrançaisToolStripMenuItem.Text = "français"
         ' 
         ' AboutToolStripMenuItem
@@ -285,12 +264,6 @@ Partial Class Form1
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         AboutToolStripMenuItem.Size = New Size(52, 20)
         AboutToolStripMenuItem.Text = "About"
-        ' 
-        ' ModifyDropdownValuesToolStripMenuItem
-        ' 
-        ModifyDropdownValuesToolStripMenuItem.Name = "ModifyDropdownValuesToolStripMenuItem"
-        ModifyDropdownValuesToolStripMenuItem.Size = New Size(206, 22)
-        ModifyDropdownValuesToolStripMenuItem.Text = "Modify dropdown values"
         ' 
         ' Form1
         ' 
@@ -301,9 +274,6 @@ Partial Class Form1
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label3)
-        Controls.Add(ShowText)
-        Controls.Add(CreateText)
-        Controls.Add(ActText)
         Controls.Add(ShowBox)
         Controls.Add(CreateBox)
         Controls.Add(ActBox)
@@ -339,9 +309,6 @@ Partial Class Form1
     Friend WithEvents ActBox As ComboBox
     Friend WithEvents CreateBox As ComboBox
     Friend WithEvents ShowBox As ComboBox
-    Friend WithEvents ActText As TextBox
-    Friend WithEvents CreateText As TextBox
-    Friend WithEvents ShowText As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
