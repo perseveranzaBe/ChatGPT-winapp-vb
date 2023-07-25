@@ -1,5 +1,6 @@
 # ChatGPT app in visual basic for Windows
 This software provides a graphical user interface to interact with ChatGPT, a state-of-the-art AI developed by OpenAI, in a more flexible and customizable manner. It was originally built as a proof of concept using Visual Basic and ChatGPT 4.
+To try this porgram, go to https://github.com/perseveranzaBe/ChatGPT-winapp-vb/actions and select the latest succesful build, download the artifact at the bottom, copy all the files to a directory of your choosing and start the application. 
 
 # Features
 The software allows users to:
