@@ -2,6 +2,8 @@
 This software provides a graphical user interface to interact with ChatGPT, a state-of-the-art AI developed by OpenAI, in a more flexible and customizable manner. It was originally built as a proof of concept using Visual Basic and ChatGPT 4.
 To try this porgram, go to https://github.com/perseveranzaBe/ChatGPT-winapp-vb/actions and select the latest succesful build, download the artifact at the bottom, copy all the files to a directory of your choosing and start the application. 
 
+The first thing to do is get an API key from OpenAI https://platform.openai.com/account/api-keys and enter it in the application. Failing to do so will result in an application that does not work.
+
 # Features
 The software allows users to:
 
