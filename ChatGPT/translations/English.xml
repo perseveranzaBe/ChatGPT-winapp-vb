@@ -38,7 +38,10 @@
   <data name="Form1.AboutToolStripMenuItem.Text">
     <value>About</value>
   </data>
-
+  <data name="Form1.ModifyDropdownValuesToolStripMenuItem.Text">
+    <value>Modify prefix values</value>
+  </data>
+  
   <data name="getModels.Text">
     <value>Set model</value>
   </data>
@@ -96,4 +99,17 @@
   <data name="AboutBox.Button1.Text">
     <value>Close</value>
   </data>
+
+  <data name="ActCreateShowSetting.Label1.Text">
+    <value>'Act as' list</value>
+  </data>
+  <data name="ActCreateShowSetting.Label2.Text">
+    <value>'Create as' list</value>
+  </data>
+  <data name="ActCreateShowSetting.Label3.Text">
+    <value>'Show as' list</value>
+  </data>
+  <data name="ActCreateShowSetting.Button1.Text">
+    <value>Save / Close</value>
+  </data>  
 </root>

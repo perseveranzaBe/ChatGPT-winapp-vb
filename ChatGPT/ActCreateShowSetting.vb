@@ -5,6 +5,10 @@ Imports System.Linq
 Public Class ActCreateShowSetting
     Private Sub ActCreateShowSetting_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadSettingsToRichTextBoxes()
+        'get language for form
+        Dim lang As String = ""
+        lang = My.Settings("language")
+        TranslateForm(Me, lang)
     End Sub
 
     Private Sub LoadSettingsToRichTextBoxes()

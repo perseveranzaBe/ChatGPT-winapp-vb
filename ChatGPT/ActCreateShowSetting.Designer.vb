@@ -95,6 +95,7 @@ Partial Class ActCreateShowSetting
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.GradientActiveCaption
         ClientSize = New Size(404, 501)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -104,7 +105,7 @@ Partial Class ActCreateShowSetting
         Controls.Add(RichTextBoxCREATE)
         Controls.Add(RichTextBoxACT)
         Name = "ActCreateShowSetting"
-        Text = "ActCreateShowSetting"
+        Text = "Modify prefix values"
         ResumeLayout(False)
         PerformLayout()
     End Sub

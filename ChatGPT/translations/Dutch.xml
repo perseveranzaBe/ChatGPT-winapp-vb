@@ -38,6 +38,9 @@
   <data name="Form1.AboutToolStripMenuItem.Text">
     <value>Over</value>
   </data>
+  <data name="Form1.ModifyDropdownValuesToolStripMenuItem.Text">
+    <value>Voorvoegselwaarden wijzigen</value>
+  </data>
 
   <data name="getModels.Text">
     <value>Stel model in</value>
@@ -95,5 +98,18 @@
   </data>
   <data name="AboutBox.Button1.Text">
     <value>Sluiten</value>
+  </data>
+
+  <data name="ActCreateShowSetting.Label1.Text">
+    <value>'Optreden als' lijst</value>
+  </data>
+  <data name="ActCreateShowSetting.Label2.Text">
+    <value>'Creëren als' lijst</value>
+  </data>
+  <data name="ActCreateShowSetting.Label3.Text">
+    <value>'Weergeven als' lijst</value>
+  </data>
+  <data name="ActCreateShowSetting.Button1.Text">
+    <value>Opslaan / Sluiten</value>
   </data>
 </root>

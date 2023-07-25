@@ -242,7 +242,7 @@ Public Class Form1
         My.Settings.Save()
     End Sub
 
-    Private Sub PopulateComboBox()
+    Friend Sub PopulateComboBox()
         ' Clear the ComboBox
         ActBox.Items.Clear()
         CreateBox.Items.Clear()
@@ -268,10 +268,26 @@ Public Class Form1
         For Each value As String In valuesShow
             ShowBox.Items.Add(value.Trim())
         Next
-    End Sub
 
+        ' Set the default selected item if any items exist
+        If ActBox.Items.Count > 0 Then
+            ActBox.SelectedIndex = 0
+        End If
+        If CreateBox.Items.Count > 0 Then
+            CreateBox.SelectedIndex = 0
+        End If
+        If ShowBox.Items.Count > 0 Then
+            ShowBox.SelectedIndex = 0
+        End If
+    End Sub
+    Private Sub ActCreateShowSetting_FormClosing(sender As Object, e As FormClosingEventArgs)
+        ' Call your method here
+        PopulateComboBox()
+    End Sub
     Private Sub ModifyDropdownValuesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyDropdownValuesToolStripMenuItem.Click
         Dim ActCreateShowSetting As New ActCreateShowSetting()
+        ' Attach an event handler to the FormClosing event
+        AddHandler ActCreateShowSetting.FormClosing, AddressOf ActCreateShowSetting_FormClosing
         ActCreateShowSetting.ShowDialog()
     End Sub
 End Class

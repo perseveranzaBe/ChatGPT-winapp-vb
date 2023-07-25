@@ -38,6 +38,9 @@
   <data name="Form1.AboutToolStripMenuItem.Text">
     <value>À propos</value>
   </data>
+  <data name="Form1.ModifyDropdownValuesToolStripMenuItem.Text">
+    <value>Modifier les valeurs de préfixe</value>
+  </data>
 
   <data name="getModels.Text">
     <value>Définir le modèle</value>
@@ -95,5 +98,18 @@
   </data>
   <data name="AboutBox.Button1.Text">
     <value>Fermer</value>
+  </data>
+
+  <data name="ActCreateShowSetting.Label1.Text">
+    <value>Liste 'Agir comme'</value>
+  </data>
+  <data name="ActCreateShowSetting.Label2.Text">
+    <value>Liste 'Créer comme'</value>
+  </data>
+  <data name="ActCreateShowSetting.Label3.Text">
+    <value>Liste 'Afficher comme'</value>
+  </data>
+  <data name="ActCreateShowSetting.Button1.Text">
+    <value>Sauvegarder / Fermer</value>
   </data>
 </root>
