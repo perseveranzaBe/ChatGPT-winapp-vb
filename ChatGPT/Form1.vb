@@ -76,15 +76,7 @@ Public Class Form1
         RichTextBox1.Clear()
         TextBox1.Clear()
         _messages.Clear()
-        ActBox.Visible = True
-        CreateBox.Visible = True
-        ShowBox.Visible = True
-        Label3.Visible = True
-        Label4.Visible = True
-        Label5.Visible = True
-        Button3.Visible = True
-        Button5.Visible = True
-        Button6.Visible = True
+        ToggleExtraControls(True)
 
     End Sub
 
